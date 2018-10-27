@@ -1,0 +1,6 @@
+@mixin backg($url){
+  background: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

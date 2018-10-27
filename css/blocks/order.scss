@@ -1,0 +1,229 @@
+.order{
+  background:url('../../img/order/order.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.form__elem{
+  display: flex;
+
+  @include tablets{
+    flex-direction: column;
+    padding: 0 16%;
+  }
+
+  @include phones{
+    padding: 0;
+  }
+}
+
+.form__content{
+  width: 50%;
+  margin-right: rem(20px);
+
+  @include tablets{
+    width: 100%;
+  }
+
+  &_margin{
+    margin-right: rem(0px);
+  }
+  
+}
+
+.form__row{
+  display: flex;
+  margin-bottom: rem(10px);
+
+  @include phones{
+    margin-bottom: rem(14px);
+  }
+
+}
+
+.form__row-btns{
+  @include tablets{
+    margin-top: 30px;
+  }
+}
+
+.form__row-radio, .form__row-check, .form__row-btns{
+  @include phones{
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.form__block{
+  margin-right: rem(20px);
+  flex: 1;
+  &:last-child{
+    margin-right: rem(0px);
+  }
+  @include phones{
+    
+    &:nth-child(3){
+    margin-right: 0;
+  }
+  }
+  
+  &_display{
+    &_none{
+      @include phones{
+        display: none;
+      }
+    }
+  }
+}
+
+.form__block-title{
+  color: #fff;
+  margin-bottom: rem(9px);
+
+}
+
+.form__block-input{
+  border: none;
+  width: 100%;
+  border-radius: rem(6px);
+  padding: rem(5px);
+  outline: none;
+  border: rem(2px) solid transparent;
+
+  &:focus{
+    border: rem(2px) solid $orange;
+  }
+
+  @include phones{
+    padding: rem(7px);
+  }
+}
+
+
+.form__row-textarea{
+  margin-bottom: rem(11px);
+}
+
+.area{
+  width: 100%;
+  height: rem(108px);;
+  border-radius: rem(6px);
+  outline: none;
+  border: rem(2px) solid transparent;
+  padding: rem(5px);
+  resize: none;
+
+  &:focus{
+    border: rem(2px) solid $orange;
+  }
+  @include phones{
+    height: rem(111px);
+  }
+}
+
+.form__row-radio{
+  margin-bottom: rem(20px);
+}
+
+.form__radio{
+  display: flex;
+  
+}
+
+.form__radio-label{
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-radio__check{
+  display: none;
+}
+
+.input-radio__check:checked + .radio__styled:before{
+  content: "";
+  width: rem(7px);
+  height: rem(7px);
+  display: flex;
+  position: absolute;
+  background: $orange;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.radio__styled{
+  width: rem(16px);
+  height: rem(16px);
+  border-radius: 50%;
+  display: flex;
+  background: #fff;
+  position: relative;
+  margin-right: rem(10px);
+}
+.radio__styled-name{
+  margin-right: rem(16px);
+}
+
+.form__row-check{
+  margin-bottom: rem(20px);
+
+  @include phones{
+    margin: rem(39px) 0;
+  }
+}
+
+.form__check{
+  display: flex;
+}
+.form__check-block{
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-check__check{
+  display: none;
+}
+
+
+
+.input-check__check:checked + .check__styled:after{
+  content: "";
+  width: rem(15px);
+  height: rem(15px);
+  display: flex;
+  position: absolute;
+  left: rem(0px);
+  top:rem(2px);
+  background: url('../../img/order/check.png') no-repeat center center;
+}
+
+
+.check__styled::before{
+  content: "";
+  width: rem(15px);
+  height: rem(15px);
+  display: flex;
+  background: #fff;
+  margin-right:rem(10px);
+}
+
+.btns__container{
+  display: flex;
+}
+
+.btns__container-block{
+  margin-right: rem(10px);
+
+  &:last-child{
+    margin-right: rem(0px);
+  }
+}

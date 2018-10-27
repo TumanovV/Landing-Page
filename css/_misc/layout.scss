@@ -1,0 +1,214 @@
+html{
+  font-size: 16px;
+
+  @include tablets{
+    font-size: 15px;
+  }
+  @include phones{
+    font-size: 14px;
+  }
+}
+
+html,
+body{
+  height: 100%;
+}
+
+body{
+  font-size: rem(16px);
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  @include ubuntu();
+  color: $black;
+}
+
+.container{
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+  max-width: 940px;
+  display: flex;
+  flex-direction: column;
+  
+  &_footer{
+    display: flex;
+    flex-direction: row;
+
+    @include phones{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.wrapper{
+  position: relative;
+  width: 100%;
+  // min-width: rem(940px);
+  // min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 650px;
+}
+
+.maincontent{
+  height: 100%;
+  min-height: 650px;
+  transition: 1s;
+  //для анимации больших объектов
+  will-change: transform;
+  // transform: translateZ(0);
+}
+
+
+h1,
+h2,
+h3,
+h5,
+h6{
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  
+}
+
+li{
+  list-style: none;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.section{
+  height: 100vh; // 100% от высоты экрана
+  min-height: rem(650px);  // задали минимальную высоту, чтобы не было "каши"
+
+  &_centered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.section-title{
+  font-size: rem(72px);
+  @include gagalin();
+  color: $yellow;
+  margin-bottom: rem(40px);
+  @include phones{
+    font-size: rem(50px);
+  }
+
+  &_hero{
+    margin-bottom: 0;
+    @include phones{
+      font-size: rem(63px);
+    }
+  }
+
+  &_slider{
+    line-height: 1;
+  }
+
+  &_color{
+    &_black{
+      color: $black;
+    }
+  }
+
+  &_color{
+    &_white{
+      color:#fff;
+    }
+  }
+
+
+  &_position{
+    &_center{
+      text-align: center;
+    }
+  }
+
+  &_absolute{
+    position: absolute;
+    margin: rem(110px) rem(96px);
+
+    @include phones{
+      margin: rem(110px) rem(45px);
+    }
+  }
+
+}
+
+.menu-fixed{
+  position: fixed;
+  top: rem(150px);
+  right: rem(100px); 
+  
+  @include tablets{
+    display: none;
+  }
+  
+
+}
+
+.menu-fixed__item{
+  margin-bottom: rem(6px);
+  
+  &_active{
+    .menu-fixed__link{
+      border: rem(2px) solid #fff;
+    }
+  }
+}
+
+
+
+
+.menu-fixed__item:hover .menu-fixed__link{
+  border: rem(2px) solid #fff;
+}
+
+.menu-fixed__link{
+  width: rem(18px);
+  height: rem(18px);
+  border: rem(2px) solid transparent;
+  transition: .5s;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+}
+
+.menu-fixed__link::before{
+  content: "";
+  position: absolute;
+  width: rem(6px);
+  height: rem(6px);
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}

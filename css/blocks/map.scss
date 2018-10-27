@@ -1,0 +1,98 @@
+.map{
+  @include backg('../../img/map/map_bkg.jpg');
+  position: relative;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  @include backg('../../img/map/footer_bkg.jpg');
+  color: #fff;
+ 
+}
+.footer__container{
+  display: flex;
+  
+}
+
+.footer__row{
+  width: 50%;
+  @include phones{
+    text-align: center;
+    width: 100%;
+  }
+
+  &_right{
+    text-align: right;
+    @include phones{
+      text-align: center;
+    }
+  }
+}
+
+
+.footer__row-desc__str{
+  font-size: rem(14px);
+}
+
+.number{
+  @include phones{
+    padding-top: 5px;
+  }
+}
+.footer__desc-number{
+  color: $orange;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: rem(14px);
+  position: relative;
+  margin-left: rem(17px);
+}
+
+.footer__desc-number:before{
+  content: "";
+  display: flex;
+  background: url('../../img/map/phone.svg') center center no-repeat;
+  width: rem(15px);
+  height: rem(15px);
+  position: absolute;
+  left: rem(-17px);
+  top: rem(2px);
+}
+
+
+.footer__row-dec{
+  padding: rem(10px) 0;
+}
+
+.socials{
+  padding: rem(16px) 0;
+  margin-right: (-2px);
+}
+
+.socials__item{
+  display: inline-block;
+  margin-right: rem(17px);
+  
+
+  &:last-child{
+    margin-right: rem(0px);
+  }
+}
+
+
+
+
+.socials__item:hover .socials__link-icon{
+     fill:#fff;
+  }
+  .socials__link-icon{
+    width: rem(20px);
+    height: rem(20px);
+     vertical-align: middle;
+     display: inline-flex;
+     fill: #575757;
+     transition: fill .7s;
+  }
