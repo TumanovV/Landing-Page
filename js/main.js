@@ -105,6 +105,11 @@ $(function(){
 
   let inScroll = false; //убираем баг при быстрой прокрутке
 
+  const mobileDetect = new MobileDetect(window.navigator.userAgent); //планин mobile-detect
+  const isMobile = mobileDetect.mobile();
+
+  
+
   //Событие на fixed menu 
   const switchMenuActiveClass = sectionEq =>{
     $('.menu-fixed__item').eq(sectionEq).addClass('menu-fixed__item_active')
@@ -144,18 +149,31 @@ $(function(){
     }
   }
 
- //Управление колесом/тачпадом
-  $('.wrapper').on('wheel', e =>{
-    const deltaY = e.originalEvent.deltaY;
-    const section = difineSections(sections);
-    if(deltaY > 0 && section.nextSection.length){ //скролим вниз
+  const scrollToSection = direction=>{
+    const section = difineSections(sections)
 
+    if(inScroll)return;
+
+    if(direction == 'up' && section.nextSection.length){ //вниз
       performTransition(section.nextSection.index())
     }
-    
-    if(deltaY < 0 && section.prevSection.length){ //скролим вверх
+    if(direction == 'down' && section.prevSection.length){ // вверх
       performTransition(section.prevSection.index())
     }
+  }
+
+
+
+
+ //Управление колесом/тачпадом
+  $('.wrapper').on({
+    wheel: e =>{
+      const deltaY = e.originalEvent.deltaY;
+      let direction = (deltaY > 0) ? 'up' : 'down'
+
+      scrollToSection(direction)
+    }
+    
     
   })
 
@@ -179,9 +197,23 @@ $(function(){
 
     }
   })
+  //управление на телефонах
+  if(isMobile){ //если isMobile содержит строку-информацию о браузере, значит мы с телефона и выполняется код для tablets/phones
+    $(window).swipe({
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData){
+          scrollToSection(direction)
+        }
+      })
+  }
+  
+
+
+
+
+
 
   //Навигация по кнопкам
-  $('[data-scroll-to').on('click', e =>{
+  $('[data-scroll-to').on('click touchStart', e =>{
     e.preventDefault();
     const $this = $(e.currentTarget);
     //парсим строковое значение в числовое, так как  $this.attr('data-scroll-to' возвращает string

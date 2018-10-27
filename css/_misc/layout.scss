@@ -51,6 +51,9 @@ body{
   height: 100%;
   overflow: hidden;
   min-height: 650px;
+  @include tablets{
+    min-height: auto;
+  }
 }
 
 .maincontent{
@@ -60,6 +63,10 @@ body{
   //для анимации больших объектов
   will-change: transform;
   // transform: translateZ(0);
+  @include tablets{
+    min-height: auto;
+  }
+  
 }
 
 
