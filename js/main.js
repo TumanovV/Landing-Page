@@ -44,7 +44,7 @@ $(function(){
 
 //Вертикальный аккордеон "Команда"
 $(function(){
-  $('.team-acco__trigger').on('click', e =>{
+  $('.team-acco__trigger').on('click touchstart', e =>{
     e.preventDefault();
     const $this = $(e.currentTarget);
     const item = $this.closest('.team-acco__item')
@@ -66,7 +66,7 @@ $(function(){
 // Горизонтальный аккордеон "Меню"
 
 $(function(){
-  $('.menu-list__trigger').on('click', e =>{
+  $('.menu-list__trigger').on('click touchstart', e =>{
     e.preventDefault();
     
     const $this = $(e.currentTarget);
@@ -108,7 +108,7 @@ $(function(){
   const mobileDetect = new MobileDetect(window.navigator.userAgent); //планин mobile-detect
   const isMobile = mobileDetect.mobile();
 
-  
+
 
   //Событие на fixed menu 
   const switchMenuActiveClass = sectionEq =>{
@@ -139,7 +139,7 @@ $(function(){
     }, 1300)
   }
 
-  //Выноис в функцию часто используемые переменные
+  //Выносим в функцию часто используемые переменные
   const difineSections = sections =>{
     const activeSection = sections.filter('.active')
     return{
@@ -213,7 +213,7 @@ $(function(){
 
 
   //Навигация по кнопкам
-  $('[data-scroll-to').on('click touchStart', e =>{
+  $('[data-scroll-to').on('click touchstart', e =>{
     e.preventDefault();
     const $this = $(e.currentTarget);
     //парсим строковое значение в числовое, так как  $this.attr('data-scroll-to' возвращает string

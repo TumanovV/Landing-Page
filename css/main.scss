@@ -22,6 +22,7 @@ $phones: 480px;
 
 
 //blocks
+@import "blocks/slider-menu.scss";
 @import "blocks/order.scss";
 @import "blocks/hero.scss";
 @import "blocks/best.scss";
@@ -29,6 +30,6 @@ $phones: 480px;
 @import "blocks/reviews.scss";
 @import "blocks/map.scss";
 @import "blocks/menu.scss";
-@import "blocks/slider-menu.scss";
+
 
 

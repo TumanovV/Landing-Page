@@ -1,5 +1,5 @@
 .hero{
-  background: url('../../img/hero/hero_back.png') center center no-repeat;
+  background: url('../img/hero/hero_back.png') center center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -79,6 +79,7 @@
   text-decoration: none;
   color: #fff;
   display: inline-block;
+  vertical-align: middle;
   text-transform: uppercase;
   @include ubuntu(medium);
   font-size: rem(13px);
