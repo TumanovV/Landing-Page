@@ -98,13 +98,13 @@
   width: 0px;
   overflow: hidden;
   background: rgba(#141414, .7);
-  transition: 1s;
+  // transition: 1s;
   
 
  
   .menu__container-desc{
     padding: rem(60px) rem(30px);
-    opacity: 0;
+    opacity: 1;
     
 
   }
@@ -112,12 +112,15 @@
 
 .menu-list__item-active{
   .menu__container{
-    width: rem(540px);
+    // width: rem(540px);
+    // @include tablets{
+    //   width: 100%;
+    // }
     
   
   .menu__container-desc{
    opacity: 1;
-   transition-delay: 1s;
+  //  transition-delay: 1s;
   }
     
     

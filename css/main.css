@@ -188,7 +188,7 @@ footer { position: relative; width: 100%; }
 
 .menu-fixed__item:hover .menu-fixed__link { border: 0.125rem solid #fff; }
 
-.menu-fixed__link { width: 1.125rem; height: 1.125rem; border: 0.125rem solid transparent; -webkit-transition: .5s; -o-transition: .5s; transition: .5s; display: -webkit-box; display: -ms-flexbox; display: flex; border-radius: 50%; position: relative; }
+.menu-fixed__link { width: 1.125rem; height: 1.125rem; border: 0.125rem solid transparent; -webkit-transition: .5s; -o-transition: .5s; transition: .5s; display: -webkit-box; display: -ms-flexbox; display: flex; border-radius: 50%; position: relative; -webkit-box-shadow: inset 0 0 2px; box-shadow: inset 0 0 2px; }
 
 .menu-fixed__link::before { content: ""; position: absolute; width: 0.375rem; height: 0.375rem; background: #fff; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 50%; }
 
@@ -410,7 +410,7 @@ footer { position: relative; width: 100%; }
 
 .burger-menu__item:nth-child(3) { top: 1.125rem; }
 
-.tablets-menu { display: none; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: fixed; background: rgba(128, 128, 128, 0.95); -webkit-transition: display 2s ease-in-out; -o-transition: display 2s ease-in-out; transition: display 2s ease-in-out; left: 0; right: 0; height: 100%; z-index: 10; }
+.tablets-menu { display: none; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: fixed; background: rgba(128, 128, 128, 0.8); -webkit-transition: display 2s ease-in-out; -o-transition: display 2s ease-in-out; transition: display 2s ease-in-out; left: 0; right: 0; bottom: 0; top: 0; z-index: 10; }
 
 .tablets-menu_active { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -418,9 +418,13 @@ footer { position: relative; width: 100%; }
 
 .tablets-menu .tablets-menu__item { margin-bottom: 1.25rem; }
 
-.tablets-menu .tablets-menu__link { text-decoration: none; color: #fff; font-family: 'Gagalin-Regular', Arial, Helvetica, sans-serif; font-size: 3.125rem; -webkit-transition: .2s; -o-transition: .2s; transition: .2s; }
+.tablets-menu .tablets-menu__item:after { content: ""; width: 8px; height: 8px; background: black; }
+
+.tablets-menu .tablets-menu__link { text-decoration: none; color: #fff; font-size: 2.0625rem; -webkit-transition: .2s; -o-transition: .2s; transition: .2s; }
 
 .tablets-menu .tablets-menu__link:hover { color: #f9b43b; }
+
+.fancybox-active { height: 100%; }
 
 .fancybox-slide--html { padding: 0; }
 
@@ -428,7 +432,7 @@ footer { position: relative; width: 100%; }
 
 .fancybox-content { padding: 11.875rem; }
 
-.fancybox-slide--html .fancybox-close-small { padding: 0; }
+.fancybox-slide--html .fancybox-close-small { color: #fff; padding: 0; right: 9px; top: 29px; }
 
 .fancybox-slide--html .fancybox-close-small:hover { color: #f9b43b; }
 
@@ -464,7 +468,7 @@ footer { position: relative; width: 100%; }
 
 .team-container { position: absolute; background: rgba(47, 50, 52, 0.93); left: 50%; top: 0; right: 0; bottom: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-top: 3.125rem; padding-left: 5.9375rem; }
 
-@media screen and (max-width: 768px) { .team-container { left: 0; padding: 10% 15%; } }
+@media screen and (max-width: 768px) { .team-container { left: 0; padding: 10% 15%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
 
 @media screen and (max-width: 768px) { .team__content { text-align: center; } }
 
@@ -504,7 +508,7 @@ footer { position: relative; width: 100%; }
 
 @media screen and (max-width: 768px) { .reviews__item { width: 50%; height: 25%; } }
 
-.reviews__hover { position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: rgba(69, 69, 69, 0.7); opacity: 0; -webkit-transition: opacity .5s; -o-transition: opacity .5s; transition: opacity .5s; }
+.reviews__hover { position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: rgba(69, 69, 69, 0.7); opacity: 0; -webkit-transition: all .5s; -o-transition: all .5s; transition: all .5s; }
 
 .reviews__hover:hover { opacity: 1; }
 
@@ -524,7 +528,7 @@ footer { position: relative; width: 100%; }
 
 .map { background: url("../img/map/map_bkg.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; position: relative; }
 
-.footer { position: absolute; bottom: 0; right: 0; left: 0; background: url("../../img/map/footer_bkg.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; color: #fff; }
+.footer { position: absolute; bottom: 0; right: 0; left: 0; background: url("../img/map/footer_bkg.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; color: #fff; }
 
 .footer__container { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -568,13 +572,11 @@ footer { position: relative; width: 100%; }
 
 .menu-list__trigger .menu-title { position: absolute; bottom: -0.9375rem; white-space: nowrap; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; left: 0.75rem; font-size: 2.5rem; font-family: 'Gagalin-Regular', Arial, Helvetica, sans-serif; color: #fff; }
 
-.menu__container { width: 0px; overflow: hidden; background: rgba(20, 20, 20, 0.7); -webkit-transition: 1s; -o-transition: 1s; transition: 1s; }
+.menu__container { width: 0px; overflow: hidden; background: rgba(20, 20, 20, 0.7); }
 
-.menu__container .menu__container-desc { padding: 3.75rem 1.875rem; opacity: 0; }
+.menu__container .menu__container-desc { padding: 3.75rem 1.875rem; opacity: 1; }
 
-.menu-list__item-active .menu__container { width: 33.75rem; }
-
-.menu-list__item-active .menu__container .menu__container-desc { opacity: 1; -webkit-transition-delay: 1s; -o-transition-delay: 1s; transition-delay: 1s; }
+.menu-list__item-active .menu__container .menu__container-desc { opacity: 1; }
 
 @media screen and (max-width: 768px) { .menu-list__item-active .menu__container { width: 100%; } }
 

@@ -274,12 +274,13 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  background:  rgba(grey, .95);
+  background:  rgba(grey, .8);
   transition: display 2s ease-in-out;
 
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
+  top: 0;
 
   z-index: 10;
 
@@ -293,6 +294,15 @@
 
   .tablets-menu__item{
     margin-bottom: rem(20px);
+
+    &:after{
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: black;
+     
+      
+    }
     
   }
 
@@ -302,8 +312,7 @@
   .tablets-menu__link{
     text-decoration: none;
     color: #fff;
-    @include gagalin();
-    font-size: rem(50px);
+    font-size: rem(33px);
     transition: .2s;
     &:hover{
       color: $yellow;
@@ -314,6 +323,11 @@
 }
 
 //fancybox
+
+.fancybox-active{
+  height: 100%;
+}
+
 .fancybox-slide--html{
   padding: 0;
 }
@@ -324,7 +338,10 @@
   padding: rem(190px)
 }
 .fancybox-slide--html .fancybox-close-small {
+  color: #fff;
   padding: 0;
+  right: 9px;
+  top: 29px;
   &:hover{
     color: $yellow;
   }
@@ -333,3 +350,4 @@
 .tablets-menu__list{
   text-align: center;
 }
+

@@ -26,7 +26,7 @@
   bottom: 0;
   background: rgba(#454545, .7);
   opacity: 0;
-  transition: opacity .5s;
+  transition: all .5s;
 
   &:hover{
     opacity: 1;
@@ -38,6 +38,7 @@
     padding-top: rem(50px);
     padding-left: rem(19px);
     color: #fff;
+   
 
     @include tablets{
       padding-top: 0;

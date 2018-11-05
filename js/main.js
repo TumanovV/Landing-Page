@@ -37,7 +37,14 @@
 $(function(){
   $('[data-fancybox]').fancybox({
     touch: false,
-    padding: 0
+    padding: 0,
+    type: 'inline',
+    maxWidth: 460,
+    fitToView: true,
+  })
+  $('.tablets-menu__item').on('click', e =>{
+    e.preventDefault();
+    $.fancybox.close()
   })
 })
 
@@ -66,24 +73,104 @@ $(function(){
 // Горизонтальный аккордеон "Меню"
 
 $(function(){
-  $('.menu-list__trigger').on('click touchstart', e =>{
-    e.preventDefault();
-    
-    const $this = $(e.currentTarget);
-    const item = $this.closest('.menu-list__item')
-    const container = item.closest('.menu-list')
-    const items = container.find('.menu-list__item')
-    const content = item.find('.menu__container')
-    const textBlock = content.find('.menu__container-desc')
-    
-    if(!item.hasClass('menu-list__item-active')){
-      items.removeClass('menu-list__item-active');
-      item.addClass('menu-list__item-active')
-    }else{
-      item.removeClass('menu-list__item-active')
-    }
+    let flag = true;
+    $('.menu-list__trigger').on('click touchstart', e =>{
+        e.preventDefault();
+        
 
-  })
+
+        const calculateWidth = () =>{
+          const wWidth = $(window).width();
+          const titles = $('.menu-list__trigger');
+          const titlesWidth = titles.width();
+          const reqWidth = wWidth - (titlesWidth * titles.length);
+          return(reqWidth > 550) ? 550 : reqWidth
+          
+        }
+       
+        
+
+
+
+
+       const $this = $(e.currentTarget);
+       const item = $this.closest('.menu-list__item');
+       const container = item.closest('.menu-list')
+       const items = container.find('.menu-list__item');
+       const textBlock = container.find('.menu__container');
+       const otherBlock = item.find('.menu__container');
+       const reqWidth = calculateWidth();
+       const textDesc = container.find('.menu__container-desc');
+       const otherDesc = item.find('.menu__container-desc');
+       textDesc.hide()
+
+       if(!item.hasClass('menu-list__item-active')){
+         items.removeClass('menu-list__item-active');
+         item.addClass('menu-list__item-active')
+         textBlock.animate({
+           'width': '0px'
+         })
+         otherBlock.animate({
+           'width': reqWidth+ 'px'
+         },()=>{textDesc.fadeIn()} )
+       }else{
+         items.removeClass('menu-list__item-active')
+         otherBlock.animate({
+          'width': '0px'
+        })
+       }
+        
+
+        
+
+        
+      
+        
+
+        
+
+      
+        
+        // const openItem = item =>{
+        //   const container = $('.menu-list');
+        //   const items = container.find('.menu-list__item');
+        //   const accoText = container.find('.menu__container-desc');
+        //   const activeItem = items.filter('.menu-list__item-active');
+        //   const activeContent = activeItem.find('.menu__container');
+        //   const content = item.find('.menu__container');
+        //   const reqWidth = calculateWidth();
+
+        //   items.removeClass('menu-list__item-active');
+        //   item.addClass('menu-list__item-active');
+
+        //   accoText.hide();
+        //   activeContent.animate({
+        //     'width' : '0px'
+        //   })
+
+        //   content.animate({
+        //     'width': reqWidth  + 'px'
+        //   }, ()=>{accoText.fadeIn() })
+
+        // }
+
+        // const $this = $(e.currentTarget);
+        // const item = $this.closest('.menu-list__item')
+        // const container = item.closest('.menu-list')
+        // const items = container.find('.menu-list__item')
+        // const content = item.find('.menu__container')
+        // const textBlock = content.find('.menu__container-desc')
+        
+        // if(!item.hasClass('menu-list__item-active')){
+        //   items.removeClass('menu-list__item-active');
+        //   item.addClass('menu-list__item-active')
+        // }else{
+        //   item.removeClass('menu-list__item-active')
+        // }
+
+      })
+    
+    
 })
 
 
