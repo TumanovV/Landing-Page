@@ -303,7 +303,7 @@ $(function(){
   $('[data-scroll-to').on('click touchstart', e =>{
     e.preventDefault();
     const $this = $(e.currentTarget);
-    //парсим строковое значение в числовое, так как  $this.attr('data-scroll-to' возвращает string
+    //парсим строковое значение в числовое, так как  $this.attr('data-scroll-to' возвращает string)
     const sectionIndex = parseInt($this.attr('data-scroll-to'))
    
     performTransition(sectionIndex)
