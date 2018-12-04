@@ -1,1 +1,1 @@
-<a href='https://tumanovv.github.io/Landing-Page/' alt='Landing Page[PP]'>Landing Page</a>
+<a href='https://tumanovv.github.io/Landing-Page/' alt='Landing Pag'>Landing Page[PP]</a>
