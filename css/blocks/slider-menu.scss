@@ -279,6 +279,16 @@
     flex-direction: column;
   }
 }
+
+.burgers__corusel-item{
+  display: flex;
+  position: relative;
+  padding-bottom: 50px;
+  @include tablets{
+    flex-direction: column;
+  }
+}
+
 .burger-content__pic{
   flex: 1;
   display: flex;
@@ -323,9 +333,15 @@
 .burger__pic{
   display: block;
   max-width: 100%;
+  height: 297px;
   align-self: center;
+ 
   @include tablets{
-    width: 76%;
+    width: 50%;
+  }
+  @include phones{
+    width: 75%;
+    height: 285px;
   }
 }
 
@@ -344,24 +360,34 @@
   background: crimson;
   bottom: 0;
 }
-.arrow__left, .arrow__right{
+.arrow__trigger{
+  width: 17px;
+  height: 27px;
   position: absolute;
-}
-
-.arrow__left{
+  
   @include tablets{
-    left: 0;
-    top: 30%;
+    display: none;
+  }
+
+  &_left{
+    left: -16px;
+    @include tablets{
+      left: 0;
+      top: 30%;
+    }
+  }
+
+  &_right{
+    right: -16px;
+    @include tablets{
+      top: 30%;
+      right: 12px;
+    }
   }
 }
 
-.arrow__right{
-  right: 0;
-  @include tablets{
-    top: 30%;
-    right: 12px;
-  }
-}
+
+
 
 
 .burger__composition{
@@ -369,12 +395,12 @@
   cursor: pointer;
   color: #fff;
   width: 90px;
-  background: $orange;
+  background: rgba($orange, .8);
   text-align: center;
   border-radius: 5px;
   padding: 10px 0;
   left: 0;
-  top: -35px;
+  top: 0;
   &:hover{
     .dropdawn{
       left: initial;
@@ -422,13 +448,18 @@
 
 .burger__kkal{
   position: absolute;
-  bottom: -50px;
+  bottom: 0px;
   width: 66px;
   height: 82px;
   text-align: center;
   color: #f9d1a3;
+  @include tablets{
+    right: 20px;
+    top: 0;
+  }
 }
 .burger__kkal-title{
   display: inline-block;
   @include gagalin();
 }
+

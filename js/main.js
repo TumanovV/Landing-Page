@@ -310,3 +310,41 @@ $(function(){
   })
 
 })
+
+
+//slider
+$(function(){
+  $(document).ready(function(){
+   const burgerCarousel = $('.owl-carousel').owlCarousel({ 
+      items: 1,
+      nav: false,
+      dots: false,
+      navText: ['', ''],
+      loop: true
+    });
+    
+    $('.arrow__trigger_right').on('click', (e) =>{
+      e.preventDefault();
+      burgerCarousel.trigger('next.owl.carousel')
+    } )
+    $('.arrow__trigger_left').on('click', (e) =>{
+      e.preventDefault();
+      burgerCarousel.trigger('prev.owl.carousel')
+    } )
+
+
+  })
+})
+
+//maps
+function initMap() {
+  const opt = {
+    center: {
+      lat: 51.513416,
+      lng: -0.129761
+    },
+    zoom: 4
+  }
+  const map = new.google.maps.Map(document.getElementById("#map"), opt)
+}
+

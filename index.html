@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> -->
+  <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Burgers</title>
 </head>
@@ -15,8 +16,8 @@
   <div class="wrapper">
     <!-- обертка для one page scroll -->
     <div class="maincontent">
-     <section class="section hero active">
-      
+      <section class="section hero active">
+
         <div class="container hero__container">
           <header class="header">
             <a href="" class="logo">
@@ -76,11 +77,11 @@
             <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
           </svg>
         </a>
-      </section>  
+      </section>
 
 
 
-       <section class="section best section_centered">
+      <section class="section best section_centered">
         <div class="container">
           <div class="section-title section-title_color_black section-title_position_center">
             Мы лучшие
@@ -141,7 +142,7 @@
           </ul>
         </div>
 
-      </section> 
+      </section>
 
 
       <!-- < <section class="section slider-menu">
@@ -275,130 +276,611 @@
       <section class="section burger">
         <div class="container">
           <div class="burger-content">
-            <div class="burger__composition">
-                <svg class="burger__comp-icon">
-                  <use xlink:href="img/sprite/sprite.svg#burger"></use>
-                </svg>
-                <div class="burger__comp-desc">состав</div>
-                <div class="dropdawn">
-                  <table class="table">
-                    <tr class="table__tr">
-                      <td class="table__td">
-                        <svg class="table-icon__pic">
-                          <use xlink:href="img/sprite/sprite.svg#beef" style="fill: #e25028"></use>
-                        </svg>
-                      </td>
-                      <td class="table__td">
-                        Говядина
-                      </td>
-                      <td class="table__td">
-                        300г
-                      </td>
-                    </tr>
-                    <tr class="table__tr">
-                      <td class="table__td">
-                        <svg class="table-icon__pic">
-                          <use xlink:href="img/sprite/sprite.svg#buns" style="fill: #f8b43a"></use>
-                        </svg>
-                      </td>
-                      <td class="table__td">
-                        Говядина
-                      </td>
-                      <td class="table__td">
-                        300г
-                      </td>
-                    </tr>
-                    <tr class="table__tr">
-                      <td class="table__td">
-                        <svg class="table-icon__pic">
-                          <use xlink:href="img/sprite/sprite.svg#salad" style="fill:#8ac03e"></use>
-                        </svg>
-                      </td>
-                      <td class="table__td">
-                        Говядина
-                      </td>
-                      <td class="table__td">
-                        300г
-                      </td>
-                    </tr>
-                    <tr class="table__tr">
-                      <td class="table__td">
-                        <svg class="table-icon__pic">
-                          <use xlink:href="img/sprite/sprite.svg#sauce" style="fill: #e25028"></use>
-                        </svg>
-                      </td>
-                      <td class="table__td">
-                        Говядина
-                      </td>
-                      <td class="table__td">
-                        300г
-                      </td>
-                    </tr>
-                    <tr class="table__tr">
-                      <td class="table__td">
-                        <svg class="table-icon__pic">
-                          <use xlink:href="img/sprite/sprite.svg#cucumber" style="fill:#8ac03e"></use>
-                        </svg>
-                      </td>
-                      <td class="table__td">
-                        Говядина
-                      </td>
-                      <td class="table__td">
-                        300г
-                      </td>
-                    </tr>
-                    <tr class="table__tr">
-                      <td class="table__td">
-                        <svg class="table-icon__pic">
-                          <use xlink:href="img/sprite/sprite.svg#cheese" style="fill: #f8b43a"></use>
-                        </svg>
-                      </td>
-                      <td class="table__td">
-                        Говядина
-                      </td>
-                      <td class="table__td">
-                        300г
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-            </div>
-            <div class="burger__kkal">
-              <div class="burger__kkal-pic">
-                <img src="img/slider-burger/kkal.png" alt="" class="kkal__img">
-              </div>
-              <div class="burger__kkal-title">Ккал</div>
-            </div>
-            <div class="burger-content__pic">
-              <img src="img/slider-burger/black-burger.png" alt="" class="burger__pic">
-            </div>
-            <div class="burger__info">
-              <div class="section-title section-title_color_white section-title_line">
-                Dark beef burger
-              </div>
-              <div class="burger__info-desc">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, officia mollitia omnis eligendi
-                  facilis molestiae eos culpa harum quos, ducimus laudantium tenetur dicta, conseq
-                  uatur rerum deleniti sint repudiandae provident. Quia.
-                </p>
-              </div>
-              <div class="burger__options">
-                <div class="burger__price">
-                  <div class="burger__price-amount">500 </div>
-                  <div class="burger__price-rubles">рублей</div>
-                </div>
-                <a href="" class="btn" data-scroll-to="6">Заказать</a>
-              </div>
-            </div>
-            <!-- <div class="block1"></div>
-            <div class="block2"></div> -->
-            <a href="#" class="arrow__left">
+
+            <a href="#" class="arrow__trigger arrow__trigger_left">
               <img src="img/slider-burger/arrow-scroll-left.png" alt="" class="arrow__left">
             </a>
-            <a href="#" class="arrow__right">
-              <img src="img/slider-burger/arrow-scroll-right.png" alt="" class="arrow__left">
+            <a href="#" class="arrow__trigger arrow__trigger_right">
+              <img src="img/slider-burger/arrow-scroll-right.png" alt="" class="arrow__right">
             </a>
+
+            <ul class="owl-carousel owl-theme">
+              <li class="burgers__corusel-item">
+                <div class="burger__composition">
+                  <svg class="burger__comp-icon">
+                    <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger__comp-desc">состав</div>
+                  <div class="dropdawn">
+                    <table class="table">
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#beef" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#buns" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#salad" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#sauce" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cucumber" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cheese" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="burger__kkal">
+                  <div class="burger__kkal-pic">
+                    <img src="img/slider-burger/kkal.png" alt="" class="kkal__img">
+                  </div>
+                  <div class="burger__kkal-title">Ккал</div>
+                </div>
+                <div class="burger-content__pic">
+                  <img src="img/slider-burger/black-burger.png" alt="" class="burger__pic">
+                </div>
+                <div class="burger__info">
+                  <div class="section-title section-title_color_white section-title_line">
+                    Dark beef burger
+                  </div>
+                  <div class="burger__info-desc">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, officia mollitia omnis eligendi
+                      facilis molestiae eos culpa harum quos, ducimus laudantium tenetur dicta, conseq
+                      uatur rerum deleniti sint repudiandae provident. Quia.
+                    </p>
+                  </div>
+                  <div class="burger__options">
+                    <div class="burger__price">
+                      <div class="burger__price-amount">500 </div>
+                      <div class="burger__price-rubles">рублей</div>
+                    </div>
+                    <a href="" class="btn" data-scroll-to="6">Заказать</a>
+                  </div>
+                </div>
+              </li>
+              <li class="burgers__corusel-item">
+                <div class="burger__composition">
+                  <svg class="burger__comp-icon">
+                    <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger__comp-desc">состав</div>
+                  <div class="dropdawn">
+                    <table class="table">
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#beef" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#buns" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#salad" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#sauce" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cucumber" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cheese" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="burger__kkal">
+                  <div class="burger__kkal-pic">
+                    <img src="img/slider-burger/kkal.png" alt="" class="kkal__img">
+                  </div>
+                  <div class="burger__kkal-title">Ккал</div>
+                </div>
+                <div class="burger-content__pic">
+                  <img src="img/slider-burger/burger_sandwich.png" alt="" class="burger__pic">
+                </div>
+                <div class="burger__info">
+                  <div class="section-title section-title_color_white section-title_line">
+                    Burger Sandwich
+                  </div>
+                  <div class="burger__info-desc">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, officia mollitia omnis eligendi
+                      facilis molestiae eos culpa harum quos, ducimus laudantium tenetur dicta, conseq
+                      uatur rerum deleniti sint repudiandae provident. Quia.
+                    </p>
+                  </div>
+                  <div class="burger__options">
+                    <div class="burger__price">
+                      <div class="burger__price-amount">500 </div>
+                      <div class="burger__price-rubles">рублей</div>
+                    </div>
+                    <a href="" class="btn" data-scroll-to="6">Заказать</a>
+                  </div>
+                </div>
+              </li>
+              <li class="burgers__corusel-item">
+                <div class="burger__composition">
+                  <svg class="burger__comp-icon">
+                    <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger__comp-desc">состав</div>
+                  <div class="dropdawn">
+                    <table class="table">
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#beef" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#buns" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#salad" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#sauce" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cucumber" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cheese" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="burger__kkal">
+                  <div class="burger__kkal-pic">
+                    <img src="img/slider-burger/kkal.png" alt="" class="kkal__img">
+                  </div>
+                  <div class="burger__kkal-title">Ккал</div>
+                </div>
+                <div class="burger-content__pic">
+                  <img src="img/slider-burger/Spicy_Shrimp_Burger.png" alt="" class="burger__pic burger__pic_small_hight ">
+                </div>
+                <div class="burger__info">
+                  <div class="section-title section-title_color_white section-title_line">
+                    Spicy Shrimp Burger
+                  </div>
+                  <div class="burger__info-desc">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, officia mollitia omnis eligendi
+                      facilis molestiae eos culpa harum quos, ducimus laudantium tenetur dicta, conseq
+                      uatur rerum deleniti sint repudiandae provident. Quia.
+                    </p>
+                  </div>
+                  <div class="burger__options">
+                    <div class="burger__price">
+                      <div class="burger__price-amount">500 </div>
+                      <div class="burger__price-rubles">рублей</div>
+                    </div>
+                    <a href="" class="btn" data-scroll-to="6">Заказать</a>
+                  </div>
+                </div>
+              </li>
+              <li class="burgers__corusel-item">
+                <div class="burger__composition">
+                  <svg class="burger__comp-icon">
+                    <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger__comp-desc">состав</div>
+                  <div class="dropdawn">
+                    <table class="table">
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#beef" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#buns" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#salad" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#sauce" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cucumber" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cheese" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="burger__kkal">
+                  <div class="burger__kkal-pic">
+                    <img src="img/slider-burger/kkal.png" alt="" class="kkal__img">
+                  </div>
+                  <div class="burger__kkal-title">Ккал</div>
+                </div>
+                <div class="burger-content__pic">
+                  <img src="img/slider-burger/NYC-Diner-Bacon-Cheeseburger.png" alt="" class="burger__pic">
+                </div>
+                <div class="burger__info">
+                  <div class="section-title section-title_color_white section-title_line">
+                    Bacon Cheesburger
+                  </div>
+                  <div class="burger__info-desc">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, officia mollitia omnis eligendi
+                      facilis molestiae eos culpa harum quos, ducimus laudantium tenetur dicta, conseq
+                      uatur rerum deleniti sint repudiandae provident. Quia.
+                    </p>
+                  </div>
+                  <div class="burger__options">
+                    <div class="burger__price">
+                      <div class="burger__price-amount">500 </div>
+                      <div class="burger__price-rubles">рублей</div>
+                    </div>
+                    <a href="" class="btn" data-scroll-to="6">Заказать</a>
+                  </div>
+                </div>
+              </li>
+              <li class="burgers__corusel-item">
+                <div class="burger__composition">
+                  <svg class="burger__comp-icon">
+                    <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger__comp-desc">состав</div>
+                  <div class="dropdawn">
+                    <table class="table">
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#beef" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#buns" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#salad" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#sauce" style="fill: #e25028"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cucumber" style="fill:#8ac03e"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                      <tr class="table__tr">
+                        <td class="table__td">
+                          <svg class="table-icon__pic">
+                            <use xlink:href="img/sprite/sprite.svg#cheese" style="fill: #f8b43a"></use>
+                          </svg>
+                        </td>
+                        <td class="table__td">
+                          Говядина
+                        </td>
+                        <td class="table__td">
+                          300г
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="burger__kkal">
+                  <div class="burger__kkal-pic">
+                    <img src="img/slider-burger/kkal.png" alt="" class="kkal__img">
+                  </div>
+                  <div class="burger__kkal-title">Ккал</div>
+                </div>
+                <div class="burger-content__pic">
+                  <img src="img/slider-burger/Chiken burger.png" alt="" class="burger__pic">
+                </div>
+                <div class="burger__info">
+                  <div class="section-title section-title_color_white section-title_line">
+                    Chiken Burger
+                  </div>
+                  <div class="burger__info-desc">
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, officia mollitia omnis eligendi
+                      facilis molestiae eos culpa harum quos, ducimus laudantium tenetur dicta, conseq
+                      uatur rerum deleniti sint repudiandae provident. Quia.
+                    </p>
+                  </div>
+                  <div class="burger__options">
+                    <div class="burger__price">
+                      <div class="burger__price-amount">500 </div>
+                      <div class="burger__price-rubles">рублей</div>
+                    </div>
+                    <a href="" class="btn" data-scroll-to="6">Заказать</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- <div class="block1"></div>
+            <div class="block2"></div> -->
+
+
           </div>
         </div>
       </section>
@@ -421,7 +903,7 @@
 
 
 
-       <section class="section team">
+      <section class="section team">
         <div class="team-container">
           <div class="team__content">
             <div class="section-title">Команда
@@ -503,7 +985,7 @@
             </ul>
           </div>
         </div>
-      </section> 
+      </section>
 
 
 
@@ -586,10 +1068,10 @@
           </li>
 
         </ul>
-      </section> 
+      </section>
 
 
-       <section class="section reviews" id="reviews">
+      <section class="section reviews" id="reviews">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image:url('img/reviews/1.png')">
             <div class="reviews__hover">
@@ -721,11 +1203,11 @@
           </li>
 
         </ul>
-      </section> 
+      </section>
 
 
 
-       <section class="section order section_centered">
+      <section class="section order section_centered">
         <div class="container">
           <div class="section-title section-title_position_center">
             Закажите доставку
@@ -818,10 +1300,11 @@
             </form>
           </div>
         </div>
-      </section> 
+      </section>
 
 
-       <section class="section map">
+      <section class="section map">
+        <div id="map"></div>
         <footer class="footer">
           <div class="container container_footer">
             <div class="footer__row">
@@ -869,7 +1352,7 @@
             </div>
           </div>
         </footer>
-      </section> 
+      </section>
     </div>
 
     <ul class="menu-fixed">
@@ -928,6 +1411,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ1ZTGjgsgrxUF2aKV7EiufvXgsVUuzn4&callback=initMap"
+  type="text/javascript"></script>
+  <script src="js/map.js"></script>
   <script src="js/main.js"></script>
 </body>
 
