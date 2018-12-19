@@ -1,11 +1,23 @@
-// function initMap() {
-//   const opt = {
-//     center: {
-//       lat: 51.513416,
-//       lng: -0.129761
-//     },
-//     zoom: 4
-//   }
-//   const map = new.google.maps.Map(document.getElementById("#map"), opt)
-//   return initMap();
-// }
+ymaps.ready(init);
+
+function init(){
+  var map = new ymaps.Map('map',{
+    center:[59.896317, 30.424305],
+    zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+  var placemark = new ymaps.Placemark([59.97, 30.31],{
+    
+
+
+
+  },
+  {
+    iconLayout: 'default#image',
+    iconImageHref: './img/map/map-marker.png',
+    iconImageSize: [46,57],
+  
+  });
+  map.geoObjects.add(placemark);
+}

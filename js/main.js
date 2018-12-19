@@ -337,14 +337,28 @@ $(function(){
 })
 
 //maps
-function initMap() {
-  const opt = {
-    center: {
-      lat: 51.513416,
-      lng: -0.129761
-    },
-    zoom: 4
-  }
-  const map = new.google.maps.Map(document.getElementById("#map"), opt)
-}
+// function initMap() {
+//   const opt = {
+//     center: {
+//       lat: 51.513416,
+//       lng: -0.129761
+//     },
+//     zoom: 4
+//   }
+//   const map = new.google.maps.Map(document.getElementById("#map"), opt)
+// }
 
+// ymaps.ready(init);
+
+// function init(){
+//   var map = new ymaps.Map('map',{
+//     center:[59.896317, 30.424305],
+//     zoom: 17,
+//     controls: ['zoomControl'],
+//     behaviors: ['drag']
+//   });
+//   var placemark = new ymaps.Placemark([59.896317, 30.424305],{
+
+//   });
+//   map.geoObjects.add(placemark);
+// }
