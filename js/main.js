@@ -331,10 +331,8 @@ $(function(){
       e.preventDefault();
       burgerCarousel.trigger('prev.owl.carousel')
     } )
-    
-    $(document).ready(function(){
-      $('.owl-carousel').owlCarousel();
-    });
+
+   
 })
 
 
