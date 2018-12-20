@@ -313,7 +313,7 @@ $(function(){
 
 
 //slider
-$(function(){
+jQuery(function(){
   
    const burgerCarousel = $('.owl-carousel').owlCarousel({ 
       items: 1,
