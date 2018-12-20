@@ -295,7 +295,7 @@ footer { position: relative; width: 100%; }
 
 @media screen and (max-width: 768px) { .burger__pic { width: 50%; } }
 
-@media screen and (max-width: 480px) { .burger__pic { width: 75%; height: 285px; } }
+@media screen and (max-width: 480px) { .burger__pic { width: 70%; height: 240px; } }
 
 .block1 { width: 40px; position: absolute; height: 40px; background: red; top: 0; }
 
