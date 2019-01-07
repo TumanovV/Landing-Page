@@ -341,8 +341,8 @@ ymaps.ready(init);
 
 function init(){
   var map = new ymaps.Map('map',{
-    center:[59.896317, 30.424305],
-    zoom: 12,
+    center:[59.97, 30.31],
+    zoom: 17,
     controls: ['zoomControl'],
     behaviors: ['drag']
   });
