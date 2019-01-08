@@ -1,3 +1,10 @@
+// check
+// console.log('main is ready');
+// console.log($);
+
+
+
+
 //Модальное окно - гамбургер через JS
 
 // $(function () {
@@ -337,26 +344,155 @@ $(function(){
 
 
 //yandex-map
-ymaps.ready(init);
+$(function(){
+  ymaps.ready(init);
 
-function init(){
-  var map = new ymaps.Map('map',{
-    center:[59.97, 30.31],
-    zoom: 17,
-    controls: ['zoomControl'],
-    behaviors: ['drag']
-  });
-  var placemark = new ymaps.Placemark([59.97, 30.31],{
+  function init(){
+    var map = new ymaps.Map('map',{
+      center:[59.97, 30.31],
+      zoom: 17,
+      controls: ['zoomControl'],
+      behaviors: ['drag']
+    });
+    var placemark = new ymaps.Placemark([59.97, 30.31],{
+      
+
+
+
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/map/map-marker.png',
+      iconImageSize: [46,57],
+    
+    });
+    map.geoObjects.add(placemark);
+  }
+
+
+})
+
+
+// AJAX
+
+
+$(function(){
+    
+    var ajaxForm = function(form){
+      var data = form.serialize();
+      var url = form.attr('action');
+
+      return $.ajax({
+          type: 'POST',
+          url: url,
+          dataType: 'JSON',
+          data: data
+      })
+    };
+
+
+    var submitForm = function(e){
+      console.log('submitForm');
+      e.preventDefault();
+
+      var form = $(e.target);
+      console.log(form);
+      
+      var request = ajaxForm(form);
+
+      request.done(function(msg){
+          var mes = msg.mes;
+          var status = msg.status;
+          
+          if(status === 'OK'){
+            form.append('<p class="success" style="color:green">' + mes + '</p>');
+          }else{
+            form.append('<p class="error" style="color:red">' + mes + '</p>');
+          }
+      });
+      request.fail(function(jqXHR, textStatus){
+          alert("Request failed: " + textStatus)
+      })
+      
+    };
+
+    var buttonReset = function(e){
+      e.preventDefault();
+
+     var form = $('#order-form');
+     form.find("input[type=text],input[type=radio], textarea").val("");
+     
+     
+      
+      
+    }
+
+    $('#order-form').on('submit', submitForm);
+
+    $('#button-reset').on('click', buttonReset);
+    
+    
     
 
 
+})
 
-  },
-  {
-    iconLayout: 'default#image',
-    iconImageHref: './img/map/map-marker.png',
-    iconImageSize: [46,57],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $(function(){
+
+//   var submitForm = function(e){
+//       console.log('submitForm');
+//       e.preventDefault();
+
+//       var form = $(e.target),
+//           data = form.serialize(),//берет все данные формы
+//           url = form.attr('action');
+
+//       var request = $.ajax({
+//         type: 'POST',
+//         url: url,
+//         data: data, //все значения возьмутся из переменных выше
+//         dataType: 'JSON'
+//       });
+
+//       request.done(function(msg){
+//         var mes = msg.mes,
+//         status = msg.status;
+//         if (status === 'OK'){
+//             form.append('<p class="sucsess">' + mes + '</p>');
+//         } else{
+//             form.append('<p class="error">' + mes + '</p>');
+//         }
+//       })
+
+//       request.fail(function(jqXHR, textStatus){
+//         alert("Request failed: "+ textStatus);
+//       })
+
+//     }
+
+
+
+//   $('#order-form').on('click', submitForm);
+
   
-  });
-  map.geoObjects.add(placemark);
-}
+
+
+// })
