@@ -227,3 +227,13 @@
     margin-right: rem(0px);
   }
 }
+
+.form-success{
+  position: absolute;
+  display: none;
+  width: 200px;
+  color: #fff;
+  border: 1px solid red;
+  top: 0;
+
+}
